@@ -1,0 +1,152 @@
+{
+  "issues": [
+    {
+      "problem": "General Troubleshooting",
+      "steps": [
+        "Watch YouTube guide: https://youtu.be/j18yicimeiM?si=jolcFVFsQKpqBXdG",
+        "Remove mods affecting Link's animation/model (like Linkle and Zelda's Ballad)",
+        "Remerge mods in BCML",
+        "Check firewall configuration",
+        "Enable Extended Memory in CEMU Graphics Packs"
+      ],
+      "category": "general"
+    },
+    {
+      "problem": "Can't see other players",
+      "steps": [
+        "Verify Extended Memory is enabled",
+        "Check CEMU directory paths in BCML",
+        "Ensure DLC 80 and UPDATE 208 are installed",
+        "Uninstall any other BCML mods",
+        "Reinstall BNPs in BCML"
+      ],
+      "category": "multiplayer"
+    },
+    {
+      "problem": "Game crashes when loading into menu",
+      "steps": [
+        "Use CEMU version 1.26.2f",
+        "Verify Extended Memory and multiplayer utilities are enabled",
+        "Check mods order (classic above multiplayer)",
+        "Verify paths are correct in BCML",
+        "Verify your name in the app does not have any special characters",
+        "Reinstall BNPs in BCML"
+      ],
+      "category": "multiplayer"
+    },
+	{
+      "problem": "Can't see multiplayer utilities graphics pack",
+      "steps": [
+        "Reinstall BNPs in BCML",
+        "Verify mods order (classic above multiplayer)",
+		"Ensure you are using CEMU version 1.26.2f"
+      ],
+      "category": "multiplayer"
+    },
+	{
+      "problem": "Issues connecting to server with hamachi/radmin (server closed)",
+      "steps": [
+        "Try to ping each other in hamachi/radmin",
+        "if the ping fails, check firewall tutorial",
+        "Manually add hamachi IP into ServerConfig.ini",
+        "Verify you and other people are using the correct IP and port",
+        "Restart server"
+      ],
+      "category": "multiplayer"
+    },
+	{
+      "problem": "An error occured trying to start process",
+      "steps": [
+        "Run the exe as administrator"
+      ],
+      "category": "multiplayer"
+    },
+	{
+      "problem": "Pipe has not been connected yet/All pipe instances are busy",
+      "steps": [
+        "Restart the app",
+        "Ensure you have both C++ and dotnet 6 runtime installed",
+        "Move all multiplayer files to the root of the C drive"
+      ],
+      "category": "multiplayer"
+    },
+	{
+      "problem": "The app/server won't open or crashes instantly",
+      "steps": [
+        "Ensure you have both C++ and dotnet 6 runtime installed",
+        "Move all multiplayer files to the root of the C drive"
+      ],
+      "category": "multiplayer"
+    },
+	{
+      "problem": "BCML installation not found",
+      "steps": [
+        "Make sure you have a settings file in AppData/local/bcml",
+        "Delete all files and folders in /AppData/Local/Breath_of_the_Wild_Multip"
+      ],
+      "category": "multiplayer"
+    },
+	{
+      "problem": "The app does not open",
+      "steps": [
+        "Ensure you installed the mods in BCML and remerge them",
+        "Verify the BCML data directory is AppData/local/bcml",
+        "Ensure dotnet 8 is installed"
+      ],
+      "category": "multiplayer"
+    },
+	{
+      "problem": "The server shows a red error (cannot create a file that already exists)",
+      "steps": [
+        "Delete the Logs folder"
+      ],
+      "category": "multiplayer"
+    },
+	{
+      "problem": "The game doesn't launch after clicking connect",
+      "steps": [
+        "Verify the CEMU path in BCML is correct",
+        "Open CEMU and run BOTW one time, close CEMU and try the multiplayer launcher again"
+      ],
+      "category": "multiplayer"
+    },
+	{
+      "problem": "Infinite load when loading a save",
+      "steps": [
+        "Restart your game until it works",
+        "If it doesn't work after restarting 5 times, disable the mod and try creating a save in a different location on the map, then try loading the new save with the mod enabled"
+      ],
+      "category": "multiplayer"
+    },
+	{
+      "problem": "Link is bald/armors won't show up",
+      "steps": [
+        "Make sure you downloaded python 3.8.10 from the python website and not the Microsoft store.",
+		"Uninstall python and install it again"
+      ],
+      "category": "multiplayer"
+    }
+  ],
+  "resources": {
+	"cemu": {
+		"url": "https://cemu.info/releases/cemu_1.26.2.zip",
+		"type": "essential_download"
+	},
+	"python": {
+		"url": "https://www.python.org/downloads/release/python-3810/",
+		"type": "essential_download"
+	},
+	"vc_redist": {
+		"url": "https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist",
+		"type": "essential_download"
+	},
+	"dotnet": {
+		"url": "https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.14-windows-x64-installer",
+		"type": "essential_download"
+	},
+	"firewall_tutorial": {
+		"url": "https://discord.com/channels/912888713816719391/1092892498227118100/1222560863429591161",
+		"type": "tutorial"
+	}
+  }
+}

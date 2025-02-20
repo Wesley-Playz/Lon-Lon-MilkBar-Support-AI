@@ -1,0 +1,6 @@
+chromadb
+google-generativeai
+flask
+flask-cors
+langchain-community
+langchain-google-genai

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lon Lon MilkBar Support AI</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        #inputContainer {
+            display: flex;
+            justify-content: center; /* Centers the input and button horizontally */
+            align-items: center; /* Aligns them vertically (optional) */
+            gap: 10px; /* Adds space between the input box and button */
+            margin-top: 20px;
+        }
+        #responseContainer {
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            display: inline-block;
+            text-align: left;
+            max-width: 600px;
+        }
+        .loading {
+            text-align: center;
+            font-style: italic;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lon Lon MilkBar Support AI</h1>
+    <div id="inputContainer">
+        <input type="text" id="queryInput" placeholder="Enter your issue..." style="width: 300px; padding: 5px;">
+        <button onclick="getSupportResponse()">Submit</button>
+    </div>
+    <div id="responseContainer"></div>
+
+    <script>
+        function getSupportResponse() {
+            const query = document.getElementById("queryInput").value;
+            if (!query.trim()) {
+                alert("Please enter a query");
+                return;
+            }
+
+            const responseContainer = document.getElementById("responseContainer");
+            responseContainer.innerHTML = "<p class='loading'>The Lon Lon MilkBar Support AI is thinking...<br>(This may take a few minutes)</p>";
+
+            fetch("http://localhost:1423/support", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ query })
+            })
+            .then(response => response.json())
+            .then(data => {
+                responseContainer.innerHTML = marked.parse(data.response);
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                responseContainer.innerHTML = "<p style='color: red;'>An error occurred while fetching the response. Please try again later.</p>";
+            });
+        }
+    </script>
+</body>
+</html>
