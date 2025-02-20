@@ -19,7 +19,7 @@ This is the repository for Lon Lon Milkbar Support AI. Here you can find all of 
 - Download python and add it to PATH (there should be an option when you first launch the installer).
 - Go to [Google AI Studio](https://aistudio.google.com/app/apikey) and click 'Create API Key'.
 - Open 'app.py' and put in the API key.
-- Run `source env/bin/activate` then `python3 app.py` in a Command Prompt or Terminal.
+- Run `pip install -r requirements.txt` then `python3 app.py` in a Command Prompt or Terminal.
 
 # The Discord Bot
 - Download python and add it to PATH (there should be an option when you first launch the installer).
